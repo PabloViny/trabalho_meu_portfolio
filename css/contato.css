@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;  
+}
+
+html {
+    height: 5vh;
+}
+
+.container {
+    max-width: 1280px;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+header {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 60px 4%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: .3s;
+    border: 2px solid #75DDDD;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+header.rolagem {
+    background-color: #fff;
+    padding: 20px 4%;
+    border: none;
+}
+
+header.rolagem button {
+    background-color: #080838;
+    color: #fff
+}
+
+header ul {
+    list-style-type: none;
+}
+
+header ul li {
+    display: inline-block;
+    margin: 0 40px;
+}
+
+header ul li a {
+    color: #004ba8;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    position: relative;
+    padding-bottom: 10px;
+    transition: .2s;
+}
+
+header ul:hover li a {
+    opacity: .3;
+    transform: scale(1.2s);
+}
+
+header ul li a:hover {
+    opacity: 1;
+}
+
+header nav a::after {
+    content: " ";
+    width: 0%;
+    height: 4px;
+    background-color: #75DDDD;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: .3s ease-in-out;
+}
+
+header nav a:hover::after {
+    width: 100%;
+}
+
+.btn-contato button {
+    width: 120px;
+    height: 40px;
+    background-color: #fff;
+    color: #004ba8;
+    cursor: pointer;
+    transition: .2s;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.interface {
+    height: 100vh;
+    width: auto;
+    background-color: #02020f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.interface h1 {
+    color: #fff;
+    font-size: 4em;
+    margin: 150px 0 30px;
+}
+
+.interface h1 span {
+    color: #75DDDD;
+}
+
+form {
+    width: 700px; 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+form input, form textarea {
+    width: auto;
+    background-color: #f5efef;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    font-size: 18px;
+}
+
+form textarea {
+    resize: none;
+    max-height: 200px;
+}
+
+form #btn-enviar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+form #btn-enviar input {
+    width: 300px;
+    background-color: #75DDDD;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+button:hover, form #btn-enviar input:hover {
+    box-shadow: 0px 0px 8px #75DDDD;
+    transform: scale(1.5s);
+}
+
+@media (max-height: 600px) or (max-width: 700px) {
+    header {
+        border: none;
+    }
+    
+    header nav a::after {
+        content: none;
+        width: none;
+        height: none;
+    }
+
+    form {
+        width: auto
+    }
+}
